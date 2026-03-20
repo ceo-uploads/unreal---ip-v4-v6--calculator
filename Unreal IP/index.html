@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Unreal IP — IPv4 Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Unreal_Ip_logo.png">
+
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-layer layer-back"></div>
+        <div class="hero-layer layer-mid"></div>
+        <div class="hero-layer layer-front"></div>
+        <div class="hero-content">
+            <h1>Unreal IP</h1>
+            <p class="tag">A powerful, responsive IPv4 subnet calculator</p>
+            <div class="inputs">
+                <input id="ipInput" placeholder="Enter IPv4 (e.g. 192.168.1.133)" />
+                <input id="maskInput" placeholder="Netmask or CIDR (e.g. 255.255.255.0 or /24)" />
+                <input id="altMaskInput" placeholder="Optional sub/supernet mask (CIDR or netmask)" />
+                <div class="buttons">
+                    <button id="calcBtn" class="btn primary">Calculate</button>
+                    <button id="clearBtn" class="btn">Clear</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <section class="results" id="results">
+            <h2>Results</h2>
+            <div class="grid" id="outputs">
+                <!-- JS will populate cards here -->
+            </div>
+        </section>
+
+
+        <section class="networks" id="networksSection">
+            <h2>All networks for prefix</h2>
+            <div class="networks-actions">
+                <span id="networksCount"></span>
+                <button id="showAllBtn" class="btn">Show all (if safe)</button>
+                <button id="downloadBtn" class="btn">Download list</button>
+            </div>
+            <div class="network-list" id="networkList"></div>
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="copyright">
+            <p>© Unreal Studio — <span class="big">Unreal IP</span></p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
